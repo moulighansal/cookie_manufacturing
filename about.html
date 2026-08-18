@@ -1,0 +1,1552 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>About | Cookie Manufacturing</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500&display=swap');
+
+
+:root{
+    --cream:#f7f0e5;
+    --cream-dark:#eadbc7;
+    --brown:#3b2419;
+    --brown-light:#674331;
+    --caramel:#b97838;
+    --gold:#d49a52;
+    --text:#2a211c;
+    --muted:#76665b;
+    --white:#fffaf2;
+}
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+html{
+    scroll-behavior:smooth;
+}
+
+
+body{
+    font-family:'DM Sans',sans-serif;
+    background:var(--cream);
+    color:var(--text);
+    line-height:1.7;
+}
+
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar{
+    height:78px;
+    padding:0 6%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    background:#291810;
+
+    border-bottom:1px solid rgba(255,255,255,.12);
+
+    position:sticky;
+    top:0;
+    z-index:50;
+}
+
+
+.logo{
+    font-family:'Playfair Display',serif;
+    font-size:27px;
+    color:var(--white);
+    letter-spacing:4px;
+}
+
+
+.logo span{
+    display:block;
+    font-family:'DM Sans',sans-serif;
+    font-size:7px;
+    letter-spacing:2px;
+    margin-top:3px;
+    color:#d49a52;
+}
+
+
+.nav-links{
+    display:flex;
+    gap:32px;
+}
+
+
+.nav-links a{
+    font-size:10px;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    color:#eee4d8;
+    transition:.3s;
+}
+
+
+.nav-links a:hover,
+.nav-links .active{
+    color:var(--caramel);
+}
+
+
+/* =====================================================
+   INTRO
+===================================================== */
+
+.about-intro{
+    padding:125px 9% 100px;
+    background:var(--cream);
+
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:100px;
+
+    align-items:end;
+}
+
+
+.about-intro h1{
+    font-family:'Playfair Display',serif;
+    font-size:clamp(60px,8vw,110px);
+    line-height:.9;
+    font-weight:400;
+    color:var(--brown);
+    letter-spacing:-3px;
+}
+
+
+.intro-side{
+    padding-bottom:5px;
+}
+
+
+.eyebrow{
+    color:var(--caramel);
+    font-size:10px;
+    text-transform:uppercase;
+    letter-spacing:4px;
+    margin-bottom:20px;
+}
+
+
+.intro-side p{
+    color:var(--muted);
+    max-width:480px;
+    font-size:15px;
+}
+
+
+/* =====================================================
+   IMAGE STORY
+===================================================== */
+
+.story-image{
+    height:650px;
+    margin:0 7%;
+
+    position:relative;
+    overflow:hidden;
+}
+
+
+.story-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center;
+    display:block;
+}
+
+
+.story-caption{
+    position:absolute;
+    left:35px;
+    bottom:35px;
+
+    background:rgba(247,240,229,.94);
+
+    padding:20px 25px;
+
+    max-width:300px;
+
+    color:var(--brown);
+}
+
+
+.story-caption small{
+    display:block;
+    color:var(--caramel);
+    text-transform:uppercase;
+    letter-spacing:2px;
+    font-size:8px;
+    margin-bottom:7px;
+}
+
+
+.story-caption strong{
+    font-family:'Playfair Display',serif;
+    font-size:23px;
+    font-weight:400;
+}
+
+
+/* =====================================================
+   ORIGIN
+===================================================== */
+
+.origin{
+    padding:125px 9%;
+
+    display:grid;
+    grid-template-columns:.75fr 1.25fr;
+    gap:100px;
+
+    background:var(--white);
+}
+
+
+.origin-label{
+    color:var(--caramel);
+    text-transform:uppercase;
+    letter-spacing:4px;
+    font-size:10px;
+}
+
+
+.origin-content h2{
+    font-family:'Playfair Display',serif;
+    font-size:62px;
+    line-height:1;
+    font-weight:400;
+    color:var(--brown);
+}
+
+
+.origin-content p{
+    color:var(--muted);
+    max-width:680px;
+    margin-top:25px;
+}
+
+
+.origin-content p+p{
+    margin-top:18px;
+}
+
+
+.origin-visual{
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+}
+
+.origin-image{
+    height:430px;
+    overflow:hidden;
+}
+
+.origin-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+
+/* =====================================================
+   TIMELINE
+===================================================== */
+
+.timeline-section{
+    padding:125px 9%;
+    background:var(--cream-dark);
+}
+
+
+.timeline-heading{
+    max-width:900px;
+    margin:0 auto 70px;
+    text-align:center;
+}
+
+
+.timeline-heading h2{
+    font-family:'Playfair Display',serif;
+    font-size:65px;
+    font-weight:400;
+    line-height:1;
+    color:var(--brown);
+}
+
+
+.timeline-heading p{
+    color:var(--muted);
+    margin-top:20px;
+}
+
+
+.timeline-layout{
+    display:grid;
+    grid-template-columns:1.15fr .85fr;
+    gap:80px;
+    align-items:start;
+}
+
+.timeline-image{
+    height:540px;
+    overflow:hidden;
+    position:sticky;
+    top:110px;
+}
+
+.timeline-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+
+.timeline{
+    position:relative;
+    max-width:1000px;
+}
+
+
+.timeline:before{
+    content:"";
+    position:absolute;
+    left:8px;
+    top:0;
+    bottom:0;
+    width:1px;
+    background:rgba(59,36,25,.22);
+}
+
+
+.timeline-item{
+    display:grid;
+    grid-template-columns:45px 150px 1fr;
+    gap:25px;
+
+    padding:30px 0;
+}
+
+
+.timeline-dot{
+    width:17px;
+    height:17px;
+    border-radius:50%;
+    background:var(--caramel);
+
+    position:relative;
+    z-index:2;
+}
+
+
+.timeline-year{
+    font-size:11px;
+    letter-spacing:2px;
+    color:var(--caramel);
+    padding-top:1px;
+}
+
+
+.timeline-item h3{
+    font-family:'Playfair Display',serif;
+    font-size:30px;
+    font-weight:400;
+    color:var(--brown);
+}
+
+
+.timeline-item p{
+    color:var(--muted);
+    font-size:14px;
+    max-width:580px;
+    margin-top:7px;
+}
+
+
+/* =====================================================
+   TEAM SECTION
+===================================================== */
+
+.team{
+    padding:125px 9%;
+    background:var(--brown);
+    color:var(--white);
+}
+
+
+.team-layout{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:80px;
+    align-items:center;
+}
+
+
+.team-copy .eyebrow{
+    color:var(--gold);
+}
+
+
+.team-copy h2{
+    font-family:'Playfair Display',serif;
+    font-size:65px;
+    line-height:1;
+    font-weight:400;
+}
+
+
+.team-copy p{
+    color:#d5c9bd;
+    max-width:530px;
+    margin-top:25px;
+}
+
+
+.team-image{
+    height:560px;
+    position:relative;
+}
+
+
+.team-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+
+/* =====================================================
+   BATCH PHILOSOPHY
+===================================================== */
+
+.values{
+    padding:130px 8%;
+    background:var(--cream);
+}
+
+.values-heading{
+    display:grid;
+    grid-template-columns:1.15fr .85fr;
+    gap:100px;
+    align-items:end;
+    margin-bottom:85px;
+}
+
+.values-heading h2{
+    font-family:'Playfair Display',serif;
+    font-size:clamp(58px,7vw,94px);
+    line-height:.92;
+    font-weight:400;
+    color:var(--brown);
+    letter-spacing:-2px;
+    max-width:850px;
+}
+
+.values-heading .eyebrow{
+    margin-bottom:18px;
+}
+
+.values-heading p{
+    max-width:430px;
+    color:var(--muted);
+    font-size:15px;
+    line-height:1.8;
+    padding-bottom:5px;
+}
+
+.values-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.value{
+    background:var(--white);
+    border:1px solid rgba(59,36,25,.12);
+    padding:45px 38px;
+    min-height:310px;
+    position:relative;
+    transition:.3s ease;
+}
+
+.value:hover{
+    transform:translateY(-5px);
+}
+
+.value:nth-child(2){
+    background:#eadcc9;
+}
+
+.value:nth-child(3){
+    background:#f0e6d7;
+}
+
+.value-number{
+    color:var(--caramel);
+    font-size:10px;
+    letter-spacing:3px;
+}
+
+.value h3{
+    font-family:'Playfair Display',serif;
+    font-size:36px;
+    line-height:1.05;
+    font-weight:400;
+    color:var(--brown);
+    margin:70px 0 16px;
+}
+
+.value p{
+    color:var(--muted);
+    font-size:14px;
+    line-height:1.8;
+    max-width:470px;
+}
+
+.value:nth-child(4){
+    grid-column:1 / -1;
+    padding:0;
+    min-height:460px;
+    display:grid;
+    grid-template-columns:48% 52%;
+    overflow:hidden;
+    background:var(--brown);
+    border:none;
+}
+
+.value-image{
+    min-height:460px;
+    overflow:hidden;
+}
+
+.value-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:transform .7s ease;
+}
+
+.value:hover .value-image img{
+    transform:scale(1.03);
+}
+
+.value-content{
+    padding:65px 70px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.value:nth-child(4) .value-number{
+    color:#d99d57;
+}
+
+.value:nth-child(4) h3{
+    color:var(--white);
+    font-size:52px;
+    margin:24px 0 20px;
+    max-width:520px;
+}
+
+.value:nth-child(4) p{
+    color:#d8cbc0;
+    max-width:520px;
+}
+
+.batch-note{
+    margin-top:35px;
+    padding-top:20px;
+    border-top:1px solid rgba(59,36,25,.15);
+    color:var(--muted);
+    font-size:10px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.value:nth-child(2) .batch-note{
+    color:#856044;
+}
+
+/* =====================================================
+   CLOSING
+===================================================== */
+
+.closing{
+    min-height:560px;
+
+    background:
+        linear-gradient(
+            rgba(50,28,17,.46),
+            rgba(50,28,17,.76)
+        ),
+        url("images/16_cookie_production_floor.png")
+        center/cover;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    color:white;
+    padding:90px 8%;
+}
+
+
+.closing-content{
+    max-width:850px;
+}
+
+
+.closing .eyebrow{
+    color:#e8b56d;
+}
+
+
+.closing h2{
+    font-family:'Playfair Display',serif;
+    font-size:clamp(48px,6vw,78px);
+    line-height:1;
+    font-weight:400;
+}
+
+
+.closing p{
+    max-width:600px;
+    margin:25px auto 0;
+    color:#ded4ca;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer{
+    background:#291810;
+    color:#eee4d8;
+    padding:70px 7% 28px;
+}
+
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr 1fr;
+    gap:50px;
+    padding-bottom:55px;
+}
+
+
+.footer-logo{
+    font-family:'Playfair Display',serif;
+    font-size:30px;
+    letter-spacing:5px;
+}
+
+
+.footer-description{
+    color:#bcaea1;
+    font-size:13px;
+    max-width:340px;
+    margin-top:18px;
+}
+
+
+footer h4{
+    color:#d39a53;
+    font-size:10px;
+    letter-spacing:3px;
+    margin-bottom:20px;
+}
+
+
+footer a{
+    display:block;
+    color:#c8bcb1;
+    font-size:13px;
+    margin-bottom:9px;
+    transition:.3s;
+}
+
+
+footer a:hover{
+    color:white;
+}
+
+
+.footer-bottom{
+    border-top:1px solid rgba(255,255,255,.14);
+    padding-top:23px;
+
+    display:flex;
+    justify-content:space-between;
+
+    color:#918177;
+
+    font-size:10px;
+    letter-spacing:1px;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media(max-width:900px){
+
+    .about-intro,
+    .origin,
+    .team-layout{
+        grid-template-columns:1fr;
+        gap:50px;
+    }
+
+
+    .about-intro{
+        padding-bottom:80px;
+    }
+
+
+    .story-image{
+        margin:0 5%;
+        height:520px;
+    }
+
+
+    .values-heading{
+        display:block;
+    }
+
+
+    .values-heading p{
+        margin-top:20px;
+    }
+
+
+    .values-heading{
+        grid-template-columns:1fr;
+        gap:35px;
+    }
+
+    .values-grid{
+        grid-template-columns:1fr;
+    }
+
+    .value{
+        min-height:280px;
+    }
+
+    .value:nth-child(4){
+        grid-column:auto;
+        grid-template-columns:1fr;
+    }
+
+    .value-image{
+        min-height:300px;
+    }
+
+    .value-content{
+        padding:45px 35px;
+    }
+
+    .value:nth-child(4) h3{
+        font-size:42px;
+    }
+
+
+    .footer-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+}
+
+
+@media(max-width:600px){
+
+    .navbar{
+        height:auto;
+        padding:20px 5%;
+        flex-direction:column;
+        gap:18px;
+    }
+
+
+    .nav-links{
+        gap:13px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+
+    .nav-links a{
+        font-size:8px;
+        color:#eee4d8;
+    }
+
+
+    .about-intro,
+    .origin,
+    .timeline-section,
+    .team,
+    .values{
+        padding-left:7%;
+        padding-right:7%;
+    }
+
+
+    .about-intro h1{
+        font-size:58px;
+    }
+
+
+    .story-image{
+        margin:0;
+        height:420px;
+    }
+
+
+    .origin-content h2,
+    .timeline-heading h2,
+    .team-copy h2,
+    .values-heading h2{
+        font-size:48px;
+    }
+
+
+    .timeline-item{
+        grid-template-columns:30px 80px 1fr;
+        gap:12px;
+    }
+
+
+    .timeline-item h3{
+        font-size:23px;
+    }
+
+
+    .team-image{
+        height:430px;
+    }
+
+
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+
+    .footer-bottom{
+        flex-direction:column;
+        gap:12px;
+    }
+
+}
+
+
+
+@media (max-width: 800px){
+    .origin{
+        grid-template-columns:1fr;
+        gap:45px;
+    }
+    .origin-image{height:360px;}
+    .timeline-layout{
+        grid-template-columns:1fr;
+        gap:45px;
+    }
+    .timeline-image{
+        position:static;
+        height:380px;
+    }
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<header class="navbar">
+
+    <a href="index.html" class="logo">
+
+        COOKIE
+
+        <span>
+            MANUFACTURING WITH PURPOSE
+        </span>
+
+    </a>
+
+
+    <nav class="nav-links">
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="about.html" class="active">
+            About
+        </a>
+
+        <a href="services.html">
+            Services
+        </a>
+
+        <a href="faq.html">
+            FAQ
+        </a>
+
+        <a href="contact.html">
+            Contact
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =====================================================
+     INTRO
+===================================================== -->
+
+<section class="about-intro">
+
+
+    <div>
+
+        <div class="eyebrow">
+            ABOUT THE COMPANY
+        </div>
+
+        <h1>
+            Made with<br>
+            intention.
+        </h1>
+
+    </div>
+
+
+    <div class="intro-side">
+
+        <p>
+
+            We believe manufacturing should never take
+            the character out of food. Our approach combines
+            commercial-scale capability with the warmth,
+            care and attention people expect from a great cookie.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     STORY IMAGE
+===================================================== -->
+
+<section class="story-image">
+
+    <img
+        src="images/06_cookie_manufacturing_facility.png"
+        alt="Cookie manufacturing facility">
+
+
+    <div class="story-caption">
+
+        <small>
+            Our Environment
+        </small>
+
+        <strong>
+            Where craft meets commercial scale.
+        </strong>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ORIGIN
+===================================================== -->
+
+<section class="origin">
+
+
+    <div class="origin-visual">
+
+        <div class="origin-label">
+            OUR APPROACH
+        </div>
+
+        <div class="origin-image">
+            <img
+                src="images/07_cookie_ingredients.png"
+                alt="Cookie ingredients prepared for manufacturing">
+        </div>
+
+    </div>
+
+
+    <div class="origin-content">
+
+        <h2>
+            A modern manufacturer
+            with a food-first mindset.
+        </h2>
+
+
+        <p>
+
+            Cookie manufacturing is a balance between
+            precision and personality. Every ingredient,
+            mixing stage, forming process and bake contributes
+            to the final experience.
+
+        </p>
+
+
+        <p>
+
+            We build our production approach around that
+            understanding. Modern equipment provides the
+            repeatability needed for commercial supply,
+            while experienced teams remain focused on the
+            details that make a product worth returning to.
+
+        </p>
+
+
+        <p>
+
+            The goal is simple: dependable manufacturing
+            without losing the warmth that makes cookies
+            special in the first place.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     TIMELINE
+===================================================== -->
+
+<section class="timeline-section">
+
+
+    <div class="timeline-heading">
+
+        <div class="eyebrow">
+            HOW WE HAVE GROWN
+        </div>
+
+
+        <h2>
+            From a simple idea
+            to a capable production partner.
+        </h2>
+
+
+        <p>
+
+            Our story is built around continuous improvement,
+            stronger processes and a commitment to producing
+            better at scale.
+
+        </p>
+
+    </div>
+
+
+
+    <div class="timeline-layout">
+
+        <div class="timeline-image">
+            <img
+                src="images/17_cookie_product_collection.png"
+                alt="Finished cookie product collection">
+        </div>
+
+        <div class="timeline">
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-year">
+                BEGIN
+            </div>
+
+            <div>
+
+                <h3>
+                    A focus on better cookies
+                </h3>
+
+                <p>
+                    The journey began with a simple belief:
+                    commercial cookies could be both consistent
+                    and genuinely enjoyable.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-year">
+                GROW
+            </div>
+
+            <div>
+
+                <h3>
+                    Expanding production capability
+                </h3>
+
+                <p>
+                    Growing demand led to larger equipment,
+                    stronger systems and a more structured
+                    manufacturing environment.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-year">
+                BUILD
+            </div>
+
+            <div>
+
+                <h3>
+                    Building for commercial partners
+                </h3>
+
+                <p>
+                    Production capabilities evolved to support
+                    bulk supply, retail requirements and
+                    private-label opportunities.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-year">
+                TODAY
+            </div>
+
+            <div>
+
+                <h3>
+                    Ready for what comes next
+                </h3>
+
+                <p>
+                    Today, our focus remains on reliable
+                    manufacturing, thoughtful processes and
+                    long-term partnerships.
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     TEAM
+===================================================== -->
+
+<section class="team">
+
+
+    <div class="team-layout">
+
+
+        <div class="team-copy">
+
+            <div class="eyebrow">
+                THE PEOPLE BEHIND THE PRODUCT
+            </div>
+
+
+            <h2>
+                Technology
+                makes scale possible.
+                People make it matter.
+            </h2>
+
+
+            <p>
+
+                From production operators and quality teams
+                to manufacturing specialists, our people bring
+                experience and attention to every stage of the
+                process.
+
+            </p>
+
+
+            <p>
+
+                The machinery keeps moving.
+                The people make sure it moves well.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="team-image">
+
+            <img
+                src="images/08_manufacturing_team.png"
+                alt="Cookie manufacturing team">
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     BATCH PHILOSOPHY
+===================================================== -->
+
+<section class="values">
+
+    <div class="values-heading">
+
+        <div>
+            <div class="eyebrow">
+                WHAT MAKES A BETTER BATCH
+            </div>
+
+            <h2>
+                Good cookies<br>
+                begin with<br>
+                good decisions.
+            </h2>
+        </div>
+
+        <p>
+            Every batch is shaped by the balance between ingredients,
+            texture, heat and finishing. Our manufacturing process keeps
+            those details under control without taking the warmth out
+            of the product.
+        </p>
+
+    </div>
+
+    <div class="values-grid">
+
+        <div class="value">
+            <div class="value-number">01 · INGREDIENTS</div>
+
+            <h3>
+                Start with the right foundation.
+            </h3>
+
+            <p>
+                Carefully selected ingredients give every production run
+                the structure, flavour and consistency it needs.
+            </p>
+        </div>
+
+
+        <div class="value">
+            <div class="value-number">02 · TEXTURE</div>
+
+            <h3>
+                Texture is part of the process.
+            </h3>
+
+            <p>
+                Mixing and forming are controlled to create the bite,
+                crispness and character expected from the finished cookie.
+            </p>
+
+            <div class="batch-note">
+                Controlled process · Repeatable result
+            </div>
+        </div>
+
+
+        <div class="value">
+            <div class="value-number">03 · BAKE</div>
+
+            <h3>
+                Heat with purpose.
+            </h3>
+
+            <p>
+                Temperature, timing and airflow are carefully managed
+                through every production run for dependable results.
+            </p>
+        </div>
+
+
+        <div class="value">
+
+            <div class="value-image">
+                <img
+                    src="images/18_cookie_manufacturing_closing.png"
+                    alt="Finished cookies ready for manufacturing supply">
+            </div>
+
+            <div class="value-content">
+                <div class="value-number">04 · FINISH</div>
+
+                <h3>
+                    The final details count.
+                </h3>
+
+                <p>
+                    Cooling, inspection and packaging complete the journey
+                    before each finished product moves into supply.
+                </p>
+
+                <div class="batch-note">
+                    Finished with care · Ready for supply
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CLOSING
+===================================================== -->
+
+<section class="closing">
+
+
+    <div class="closing-content">
+
+        <div class="eyebrow">
+            MADE TO MOVE FORWARD
+        </div>
+
+
+        <h2>
+            Good manufacturing
+            starts with good people.
+        </h2>
+
+
+        <p>
+
+            We are building a company where food,
+            technology and people work together —
+            one production run at a time.
+
+        </p>
+
+    </div>
+
+
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+
+    <div class="footer-grid">
+
+
+        <div>
+
+            <div class="footer-logo">
+                COOKIE
+            </div>
+
+
+            <div class="footer-description">
+
+                Commercial cookie manufacturing
+                built around quality, consistency
+                and a little warmth.
+
+            </div>
+
+        </div>
+
+
+
+        <div>
+
+            <h4>
+                EXPLORE
+            </h4>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="services.html">
+                Services
+            </a>
+
+            <a href="faq.html">
+                FAQ
+            </a>
+
+        </div>
+
+
+
+        <div>
+
+            <h4>
+                CONNECT
+            </h4>
+
+            <a href="contact.html">
+                Contact Us
+            </a>
+
+            <a href="#">
+                LinkedIn
+            </a>
+
+            <a href="#">
+                Quality
+            </a>
+
+        </div>
+
+
+
+        <div>
+
+            <h4>
+                PARTNERS
+            </h4>
+
+            <a href="contact.html">
+                Bulk Supply
+            </a>
+
+            <a href="contact.html">
+                Private Label
+            </a>
+
+            <a href="contact.html">
+                Enquiries
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <span>
+            © 2026 COOKIE MANUFACTURING.
+            ALL RIGHTS RESERVED.
+        </span>
+
+
+        <span>
+            BAKED · CONSISTENT · READY TO SCALE
+        </span>
+
+    </div>
+
+
+</footer>
+
+
+</body>
+
+</html>

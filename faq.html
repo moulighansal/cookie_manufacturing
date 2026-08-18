@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>FAQ | Cookie Manufacturing</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500&display=swap');
+
+:root {
+    --cream: #f8f1e6;
+    --cream-dark: #eadcc8;
+    --brown: #30190f;
+    --brown-soft: #4a2b1d;
+    --caramel: #c98538;
+    --text: #3d2920;
+    --muted: #806c60;
+    --line: rgba(61, 41, 32, 0.18);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--text);
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    height: 104px;
+    background: var(--brown);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 6.5%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    text-decoration: none;
+    color: white;
+}
+
+.logo-main {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 34px;
+    letter-spacing: 7px;
+}
+
+.logo-sub {
+    display: block;
+    margin-top: 5px;
+    font-size: 9px;
+    letter-spacing: 3px;
+    color: #d59a52;
+}
+
+.nav-links {
+    display: flex;
+    gap: 42px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+    color: #d59a52;
+}
+
+
+/* =========================
+   FAQ HERO
+========================= */
+
+.faq-hero {
+    min-height: 650px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    color: white;
+    background:
+        url("images/01_cookie_factory_hero.png")
+        center center / cover no-repeat;
+}
+
+/* Blurred background image */
+
+.faq-hero::before {
+    content: "";
+    position: absolute;
+    inset: -20px;
+
+    background:
+        url("images/01_cookie_factory_hero.png")
+        center center / cover no-repeat;
+
+    filter: blur(6px);
+
+    transform: scale(1.06);
+
+    z-index: 0;
+}
+
+/* Warm dark overlay */
+
+.faq-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            rgba(48, 25, 15, 0.58),
+            rgba(48, 25, 15, 0.68)
+        );
+
+    z-index: 1;
+}
+
+/* Hero content */
+
+.faq-hero-content {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 1000px;
+
+    padding: 80px 30px;
+}
+
+.eyebrow {
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--caramel);
+    margin-bottom: 28px;
+}
+
+.faq-hero .eyebrow {
+    color: #e0a052;
+}
+
+.faq-hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(58px, 7vw, 105px);
+    font-weight: 400;
+    line-height: 0.95;
+
+    max-width: 950px;
+    margin: 0 auto;
+
+    text-shadow:
+        0 3px 18px rgba(0, 0, 0, 0.22);
+}
+
+.hero-note {
+    max-width: 680px;
+    margin: 38px auto 0;
+}
+
+.hero-note p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+
+/* =========================
+   FAQ SECTION
+========================= */
+
+.faq-section {
+    background: var(--cream-dark);
+    padding: 110px 8%;
+}
+
+.faq-layout {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.category {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 80px;
+
+    padding: 70px 0;
+
+    border-top: 1px solid var(--line);
+}
+
+.category:first-child {
+    border-top: none;
+}
+
+.category-label {
+    position: sticky;
+    top: 140px;
+    align-self: start;
+}
+
+.category-number {
+    display: block;
+
+    color: var(--caramel);
+
+    font-size: 11px;
+    letter-spacing: 3px;
+
+    margin-bottom: 16px;
+}
+
+.category-label h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 31px;
+    font-weight: 400;
+}
+
+.questions {
+    border-top: 1px solid var(--line);
+}
+
+
+/* FAQ ACCORDION */
+
+details {
+    border-bottom: 1px solid var(--line);
+}
+
+summary {
+    list-style: none;
+    cursor: pointer;
+
+    padding: 29px 4px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 30px;
+
+    font-size: 17px;
+    font-weight: 500;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+summary::after {
+    content: '+';
+
+    font-size: 27px;
+    font-weight: 300;
+
+    color: var(--caramel);
+
+    transition: transform 0.3s ease;
+}
+
+details[open] summary::after {
+    content: '−';
+}
+
+.answer {
+    padding: 0 55px 30px 4px;
+
+    color: var(--muted);
+
+    font-size: 15px;
+    line-height: 1.8;
+
+    max-width: 760px;
+}
+
+
+/* =========================
+   CTA
+========================= */
+
+.faq-cta {
+    background: var(--brown-soft);
+    color: white;
+
+    padding: 110px 8%;
+
+    text-align: center;
+}
+
+.faq-cta .eyebrow {
+    color: #d59a52;
+}
+
+.faq-cta h2 {
+    font-family: 'Playfair Display', serif;
+
+    font-weight: 400;
+
+    font-size: clamp(42px, 5vw, 72px);
+
+    line-height: 1;
+
+    max-width: 700px;
+
+    margin: auto;
+}
+
+.faq-cta p {
+    color: #d9c7b8;
+
+    max-width: 550px;
+
+    margin: 25px auto 35px;
+
+    line-height: 1.7;
+}
+
+.cta-button {
+    display: inline-block;
+
+    padding: 17px 30px;
+
+    border: 1px solid #d59a52;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    transition: 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #d59a52;
+    color: var(--brown);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: var(--brown);
+    color: white;
+
+    padding: 75px 8% 30px;
+}
+
+.footer-grid {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        2fr 1fr 1fr 1fr;
+
+    gap: 50px;
+}
+
+.footer-brand .logo-main {
+    font-size: 29px;
+}
+
+.footer-description {
+    max-width: 330px;
+
+    margin-top: 20px;
+
+    color: #cbb9aa;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+.footer-column h3 {
+    color: #d59a52;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 22px;
+}
+
+.footer-column a {
+    display: block;
+
+    color: #eee4db;
+
+    text-decoration: none;
+
+    margin-bottom: 13px;
+
+    font-size: 13px;
+
+    transition: 0.3s ease;
+}
+
+.footer-column a:hover {
+    color: #d59a52;
+}
+
+.footer-bottom {
+    max-width: 1200px;
+
+    margin: 60px auto 0;
+
+    padding-top: 25px;
+
+    border-top:
+        1px solid rgba(255, 255, 255, 0.15);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color: #a99789;
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 850px) {
+
+    .navbar {
+        height: auto;
+
+        padding: 25px 6%;
+
+        flex-direction: column;
+
+        gap: 25px;
+    }
+
+    .nav-links {
+        gap: 18px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .faq-hero {
+        min-height: 560px;
+    }
+
+    .faq-hero-content {
+        padding: 70px 25px;
+    }
+
+    .faq-hero h1 {
+        font-size: clamp(52px, 9vw, 80px);
+    }
+
+    .faq-section {
+        padding: 70px 7%;
+    }
+
+    .category {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+    .category-label {
+        position: static;
+    }
+
+    .footer-grid {
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 550px) {
+
+    .logo-main {
+        font-size: 29px;
+    }
+
+    .nav-links {
+        gap: 14px;
+    }
+
+    .nav-links a {
+        font-size: 10px;
+    }
+
+    .faq-hero {
+        min-height: 540px;
+    }
+
+    .faq-hero h1 {
+        font-size: 55px;
+
+        line-height: 0.97;
+    }
+
+    .hero-note {
+        margin-top: 30px;
+    }
+
+    .hero-note p {
+        font-size: 14px;
+    }
+
+    .faq-section {
+        padding: 60px 6%;
+    }
+
+    .category {
+        padding: 55px 0;
+    }
+
+    summary {
+        font-size: 15px;
+
+        padding: 25px 2px;
+    }
+
+    .answer {
+        padding-right: 10px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVBAR
+========================= -->
+
+<header class="navbar">
+
+    <a href="index.html" class="logo">
+
+        <span class="logo-main">
+            COOKIE
+        </span>
+
+        <span class="logo-sub">
+            MANUFACTURING WITH PURPOSE
+        </span>
+
+    </a>
+
+
+    <nav>
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="index.html">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="about.html">
+                    About
+                </a>
+            </li>
+
+            <li>
+                <a href="services.html">
+                    Services
+                </a>
+            </li>
+
+            <li>
+                <a href="faq.html" class="active">
+                    FAQ
+                </a>
+            </li>
+
+            <li>
+                <a href="contact.html">
+                    Contact
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+
+<main>
+
+
+<!-- =========================
+     FAQ HERO
+========================= -->
+
+<section class="faq-hero">
+
+    <div class="faq-hero-content">
+
+        <div class="eyebrow">
+            Questions, answered
+        </div>
+
+
+        <h1>
+            Good questions<br>
+            deserve good<br>
+            answers.
+        </h1>
+
+
+        <div class="hero-note">
+
+            <p>
+                From ingredients and production volumes
+                to packaging and private-label programs,
+                here is what partners usually want to know
+                before getting started.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     FAQ QUESTIONS
+========================= -->
+
+<section class="faq-section">
+
+    <div class="faq-layout">
+
+
+        <!-- MANUFACTURING -->
+
+        <div class="category">
+
+            <div class="category-label">
+
+                <span class="category-number">
+                    01
+                </span>
+
+                <h2>
+                    Manufacturing
+                </h2>
+
+            </div>
+
+
+            <div class="questions">
+
+
+                <details>
+
+                    <summary>
+                        What types of cookies can you manufacture?
+                    </summary>
+
+                    <div class="answer">
+
+                        We manufacture a range of commercial
+                        cookie formats, from classic chocolate
+                        chip and butter-forward recipes to
+                        specialty and custom-developed products.
+
+                    </div>
+
+                </details>
+
+
+
+                <details>
+
+                    <summary>
+                        Can you manufacture custom recipes?
+                    </summary>
+
+                    <div class="answer">
+
+                        Yes. Production programs can be developed
+                        around partner requirements, including
+                        recipe specifications, product formats
+                        and target characteristics.
+
+                    </div>
+
+                </details>
+
+
+
+                <details>
+
+                    <summary>
+                        What production volumes can you support?
+                    </summary>
+
+                    <div class="answer">
+
+                        Our manufacturing approach is designed
+                        for dependable commercial-scale production
+                        while maintaining consistent product
+                        quality across production runs.
+
+                    </div>
+
+                </details>
+
+
+
+                <details>
+
+                    <summary>
+                        Do you offer private-label manufacturing?
+                    </summary>
+
+                    <div class="answer">
+
+                        Yes. We support private-label programs
+                        for businesses looking for a manufacturing
+                        partner from production through
+                        finished-product supply.
+
+                    </div>
+
+                </details>
+
+
+            </div>
+
+        </div>
+
+
+
+        <!-- QUALITY -->
+
+        <div class="category">
+
+            <div class="category-label">
+
+                <span class="category-number">
+                    02
+                </span>
+
+                <h2>
+                    Quality
+                </h2>
+
+            </div>
+
+
+            <div class="questions">
+
+
+                <details>
+
+                    <summary>
+                        How do you maintain consistency?
+                    </summary>
+
+                    <div class="answer">
+
+                        Controlled processes, documented
+                        production procedures and quality checks
+                        help ensure that every production run
+                        delivers dependable results.
+
+                    </div>
+
+                </details>
+
+
+
+                <details>
+
+                    <summary>
+                        How are ingredients handled?
+                    </summary>
+
+                    <div class="answer">
+
+                        Ingredients are handled through controlled
+                        production processes designed to maintain
+                        consistency, food safety and product
+                        quality.
+
+                    </div>
+
+                </details>
+
+
+
+                <details>
+
+                    <summary>
+                        Do you conduct quality checks during production?
+                    </summary>
+
+                    <div class="answer">
+
+                        Quality is considered throughout the
+                        manufacturing process, from incoming
+                        ingredients through production, cooling,
+                        inspection and final packaging.
+
+                    </div>
+
+                </details>
+
+
+            </div>
+
+        </div>
+
+
+
+        <!-- SUPPLY -->
+
+        <div class="category">
+
+            <div class="category-label">
+
+                <span class="category-number">
+                    03
+                </span>
+
+                <h2>
+                    Supply &amp; Packaging
+                </h2>
+
+            </div>
+
+
+            <div class="questions">
+
+
+                <details>
+
+                    <summary>
+                        Can you handle packaging as well?
+                    </summary>
+
+                    <div class="answer">
+
+                        Yes. Finished-product programs can
+                        include packaging support so products
+                        are prepared for dependable commercial
+                        supply.
+
+                    </div>
+
+                </details>
+
+
+
+                <details>
+
+                    <summary>
+                        Can you support recurring commercial orders?
+                    </summary>
+
+                    <div class="answer">
+
+                        Our production model is built around
+                        repeatable manufacturing and dependable
+                        supply for commercial partners.
+
+                    </div>
+
+                </details>
+
+
+
+                <details>
+
+                    <summary>
+                        How do we start a manufacturing enquiry?
+                    </summary>
+
+                    <div class="answer">
+
+                        Start by sharing your product requirements,
+                        expected volumes, packaging needs and
+                        timeline. Our team can then review the
+                        opportunity and discuss the next steps.
+
+                    </div>
+
+                </details>
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     CTA
+========================= -->
+
+<section class="faq-cta">
+
+    <div class="eyebrow">
+        Still curious?
+    </div>
+
+
+    <h2>
+        Let's talk about<br>
+        your next batch.
+    </h2>
+
+
+    <p>
+        Have a question that isn't here?
+        Tell us what you are looking to make
+        and we'll take it from there.
+    </p>
+
+
+    <a href="contact.html" class="cta-button">
+        Start a conversation →
+    </a>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+
+    <div class="footer-grid">
+
+
+        <!-- BRAND -->
+
+        <div class="footer-brand">
+
+            <a href="index.html" class="logo">
+
+                <span class="logo-main">
+                    COOKIE
+                </span>
+
+                <span class="logo-sub">
+                    MANUFACTURING WITH PURPOSE
+                </span>
+
+            </a>
+
+
+            <p class="footer-description">
+
+                Modern cookie manufacturing built around
+                consistency, care and dependable supply.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- EXPLORE -->
+
+        <div class="footer-column">
+
+            <h3>
+                Explore
+            </h3>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="services.html">
+                Services
+            </a>
+
+            <a href="faq.html">
+                FAQ
+            </a>
+
+        </div>
+
+
+
+        <!-- CONNECT -->
+
+        <div class="footer-column">
+
+            <h3>
+                Connect
+            </h3>
+
+            <a href="contact.html">
+                Contact Us
+            </a>
+
+            <a href="#">
+                Quality
+            </a>
+
+            <a href="#">
+                LinkedIn
+            </a>
+
+        </div>
+
+
+
+        <!-- SUPPLY -->
+
+        <div class="footer-column">
+
+            <h3>
+                Supply
+            </h3>
+
+            <a href="contact.html">
+                Bulk Enquiries
+            </a>
+
+            <a href="contact.html">
+                Private Label
+            </a>
+
+            <a href="contact.html">
+                Get in Touch
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+
+    <div class="footer-bottom">
+
+        <span>
+            © 2026 COOKIE MANUFACTURING.
+            ALL RIGHTS RESERVED.
+        </span>
+
+
+        <span>
+            CRAFT · CONSISTENCY · SCALE
+        </span>
+
+    </div>
+
+
+</footer>
+
+
+</body>
+</html>
